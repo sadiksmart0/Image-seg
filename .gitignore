@@ -1,9 +1,11 @@
 <<<<<<< HEAD
-files/
+<<<<<<< HEAD
 __pycache__/
 Dataset/
 results/
 =======
+=======
+>>>>>>> main
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -133,4 +135,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+<<<<<<< HEAD
+>>>>>>> main
+=======
 >>>>>>> main
