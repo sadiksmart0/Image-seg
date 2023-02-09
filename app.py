@@ -21,7 +21,7 @@ with tab1:
     segment = st.button("Segment Image")
     if segment:
         byte_data = images.read()
-        response = requests.post("http://127.0.0.1:8000/image_input/", files={"file": ("image.png", byte_data, 'image/png')})
+        response = requests.post("https://brain-tumor.herokuapp.com/brain-tumor", files={"file": ("image.png", byte_data, 'image/png')})
         if response.status_code == 200:
             decoded_array = response.content
             decoded_array = np.frombuffer(decoded_array, np.uint8)
