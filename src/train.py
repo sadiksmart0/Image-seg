@@ -90,7 +90,7 @@ if __name__ == "__main__":
     csv_path = os.path.join("files", "log.csv")
     
     """ Dataset """
-    dataset_path = "C:/Users/A.M. MUKTAR/Image_seg/Dataset/Brain_MRI"
+    dataset_path = "Dataset/Brain_MRI"
     (train_x, train_y), (valid_x, valid_y), (test_x, test_y) = load_dataset(dataset_path)
 
     print(f"Train: {len(train_x)} - {len(train_y)}")

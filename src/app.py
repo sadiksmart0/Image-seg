@@ -9,14 +9,14 @@ import pandas as pd
 
 st.title("Brain Tumor Segmentation App")
 tab1, tab2 = st.tabs(["Home","Results"])
-df = pd.read_csv("C:/Users/A.M. MUKTAR/Image_seg/files/log.csv")
+df = pd.read_csv("/files/log.csv")
 
 
 with tab1:
     st.write("Please Input an MRI scan Here")
     images = st.file_uploader("Select an MRI image", type=["png","jpg"], accept_multiple_files=False, key=None, label_visibility="visible")
     if images is not None:
-        save_image_path = os.path.join("C:/Users/A.M. MUKTAR/Image_seg/Dataset/Brain_MRI/images/", images.name)
+        save_image_path = os.path.join("/Dataset/Brain_MRI/images/", images.name)
         st.image(images)
     segment = st.button("Segment Image")
     if segment:

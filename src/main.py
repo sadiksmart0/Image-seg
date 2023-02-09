@@ -16,7 +16,7 @@ app = FastAPI(title='Brain Tumor Segmentation', version='1.0',
               description='Unet Architecture model is used for prediction')
 
 with CustomObjectScope({"dice_coef": dice_coef, "dice_loss": dice_loss}):
-    model = tf.keras.models.load_model(os.path.join("C:/Users/A.M. MUKTAR/Image_seg/files", "model.h5"))
+    model = tf.keras.models.load_model(os.path.join("/files", "model.h5"))
 
 @app.post("/image_input/")
 def image_input(file: UploadFile):

@@ -35,8 +35,7 @@ def build_unet(input_shape):
     s4, p4 =  encoder_block(p3, 512)
      
     print(s1.shape, s2.shape, s3.shape, s4.shape) 
-    # print(p1.shape, p2.shape, p3.shape, p4.shape) 
-    #bridge/bottlenect layer
+ 
     b1 = conv_block(p4, 1024)
     d1 = decoder_block(b1,s4, 512)
     d2 = decoder_block(d1,s3, 256)

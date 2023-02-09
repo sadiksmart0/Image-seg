@@ -50,7 +50,7 @@ if __name__ == "__main__":
         model = tf.keras.models.load_model(os.path.join("files", "model.h5"))
 
     """ Dataset """
-    dataset_path = "C:/Users/A.M. MUKTAR/Image_seg/Dataset/Brain_MRI"
+    dataset_path = "/Dataset/Brain_MRI"
     (train_x, train_y), (valid_x, valid_y), (test_x, test_y) = load_dataset(dataset_path)
 
     """ Prediction and Evaluation """
@@ -61,10 +61,10 @@ if __name__ == "__main__":
         name = x.split("\\")[-1]
 
         """ Reading the image """
-        image = cv2.imread(x, cv2.IMREAD_COLOR) ## [H, w, 3]
-        image = cv2.resize(image, (W, H))       ## [H, w, 3]
-        x = image/255.0                         ## [H, w, 3]
-        x = np.expand_dims(x, axis=0)          ## [1, H, w, 3]
+        image = cv2.imread(x, cv2.IMREAD_COLOR) 
+        image = cv2.resize(image, (W, H))       
+        x = image/255.0                         
+        x = np.expand_dims(x, axis=0)    
 
         """ Reading the mask """
         mask = cv2.imread(y, cv2.IMREAD_GRAYSCALE)
