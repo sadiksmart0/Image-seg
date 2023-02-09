@@ -1,6 +1,5 @@
 from fastapi import FastAPI, File, UploadFile
 from fastapi.responses import StreamingResponse
-import uvicorn
 from pydantic import BaseModel
 from numpy import asarray
 from io import BytesIO
