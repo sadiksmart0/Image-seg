@@ -18,7 +18,7 @@ app = FastAPI(title='Brain Tumor Segmentation', version='1.0',
 with CustomObjectScope({"dice_coef": dice_coef, "dice_loss": dice_loss}):
     model = tf.keras.models.load_model(os.path.join("/files", "model.h5"))
 
-@app.post("/image_input/")
+@app.post("image_input/")
 def image_input(file: UploadFile):
     binary_data = file.file.read()
     file = BytesIO(binary_data)

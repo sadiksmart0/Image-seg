@@ -50,7 +50,7 @@ if __name__ == "__main__":
         model = tf.keras.models.load_model(os.path.join("files", "model.h5"))
 
     """ Dataset """
-    dataset_path = "/Dataset/Brain_MRI"
+    dataset_path = "Dataset/Brain_MRI"
     (train_x, train_y), (valid_x, valid_y), (test_x, test_y) = load_dataset(dataset_path)
 
     """ Prediction and Evaluation """
